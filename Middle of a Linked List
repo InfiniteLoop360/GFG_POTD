@@ -1,0 +1,22 @@
+class Solution {
+public:
+    
+    int solve(Node* head) {
+        int count = 0;
+        while (head != NULL) {
+            count++;
+            head = head->next;
+        }
+        return count;
+    }
+
+    int getMiddle(Node* head) {
+        int count = solve(head); 
+        int mid = count / 2;     
+        while (mid > 0) {
+            head = head->next;   
+            mid--;
+        }
+        return head->data;       
+    }
+};
