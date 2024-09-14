@@ -2,7 +2,6 @@ class Solution {
   public:
 
     void rearrange(vector<int> &arr) {
-        //CodeGenius
         vector<int> neg,pos,ans;
         for(int i=0;i<arr.size();i++){
             if(arr[i]>=0) pos.push_back(arr[i]);
