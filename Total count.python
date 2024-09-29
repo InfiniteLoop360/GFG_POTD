@@ -1,0 +1,31 @@
+### Solution Approach:
+#1. Main Idea: For each element in the array, the number of parts required is equal to the quotient when dividing the element by k. If there's a remainder, we add one more part.
+#2. Step-by-step:
+   # For each element num in arr, calculate how many full chunks of size k fit into num (using integer division num // k).
+   # If num % k != 0, it means there's a remainder, so we add an extra part for the leftover.
+#3. Time Complexity: O(n) where n is the length of the array.
+#4. Space Complexity: O(1) since we're using constant extra space.
+
+### Example:
+#For k = 3 and arr = [5, 8, 10, 13]:
+  # 5 → 3 + 2 → 2 parts
+  # 8 → 3 + 3 + 2 → 3 parts
+  # 10 → 3 + 3 + 3 + 1 → 4 parts
+  # 13 → 3 + 3 + 3 + 3 + 1 → 5 parts
+
+#Total = 2 + 3 + 4 + 5 = 14 
+
+class Solution:
+    def totalCount(self, k, arr):
+        total_count = 0
+        
+        for num in arr:
+            # For each number in the array, calculate how many times we need to divide it
+            # to ensure each part is less than or equal to k.
+            total_count += (num // k)
+            
+            # If there is any remainder after dividing by k, we need one more part.
+            if num % k != 0:
+                total_count += 1
+                
+        return total_count
