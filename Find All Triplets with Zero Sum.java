@@ -1,5 +1,3 @@
-// Please follow me on github and let me know if you have any doubt.
-
 class Solution {
     public List<List<Integer>> findTriplets(int[] arr) {
         // Your code here
@@ -33,3 +31,5 @@ class Solution {
         return new ArrayList<>(ansSet);
     }
 }
+
+
