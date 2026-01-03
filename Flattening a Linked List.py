@@ -26,9 +26,8 @@ class Solution:
                 b = b.bottom
             
             temp = temp.bottom
-            temp.next = None  # Important: break next pointer
+            temp.next = None  
         
-        # Attach remaining nodes
         if a:
             temp.bottom = a
         else:
