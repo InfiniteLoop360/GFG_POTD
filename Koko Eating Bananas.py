@@ -12,8 +12,8 @@ class Solution:
             
             if hours <= k:
                 answer = mid
-                right = mid - 1   # try smaller speed
+                right = mid - 1   
             else:
-                left = mid + 1    # need faster speed
+                left = mid + 1 
         
         return answer
